@@ -1,0 +1,30 @@
+=============================================
+MANUEL D'UTILISATION - ÉDITEUR DE TEXTE OCAML
+=============================================
+
+PRÉREQUIS
+---------
+- OCaml installé sur votre machine.
+- La bibliothèque Graphics doit être accessible. ('opam install graphics' si besoin.)
+
+UTILISATION
+-----------
+Ouvrez un terminal dans le dossier du projet et exécutez les commandes suivantes :
+make
+./test
+
+UTILISATION DE L'INTERFACE
+--------------------------
+Touches (simultanées) -> Action
+Control q -> déplacement du curseur d’un caractère vers la gauche
+Control d -> déplacement du curseur d’un caractère vers la droite
+Control z -> déplacement du curseur d’un caractère vers le haut
+Control s -> déplacement du curseur d’un caractère vers le bas
+Backspace -> effacement du caractère précédent
+Delete -> effacemet du caractère courant
+Escape -> arrêt du programme
+
+
+Caractères disponibles : !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+
+Le fichier test_des_fonctions.ml contient le test de toutes les fonctions.
