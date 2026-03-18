@@ -1,16 +1,13 @@
 # OCaml Text Editor 
 
-![OCaml](https://img.shields.io/badge/Language-OCaml-orange)
-![Graphics](https://img.shields.io/badge/Library-Graphics-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 **OCaml Text Editor** est un éditeur de texte minimaliste qui explore l'utilisation de structures de données purement fonctionnelles, spécifiquement les **Zippers**, pour implémenter un buffer d'édition efficace et robuste.
 
-## 📋 Description
+## Description
 
 Ce projet a pour objectif de manipuler des structures de données avancées (Zippers) pour permettre à l'éditeur d'interpréter et d'appliquer des actions clavier basiques : déplacement du curseur, insertion de caractères, suppression et retour à la ligne. L'interface graphique est réalisée à l'aide du module `Graphics` d'OCaml.
 
-## ✨ Fonctionnalités
+## Fonctionnalités
 
 L'éditeur propose les fonctionnalités essentielles suivantes :
 
@@ -23,7 +20,7 @@ L'éditeur propose les fonctionnalités essentielles suivantes :
     * **Fusion de lignes :** Si la suppression intervient au début ou à la fin d'une ligne, l'éditeur fusionne automatiquement la ligne courante avec la précédente ou la suivante.
 * **Raccourcis :** Déplacement rapide au début ou à la fin de la ligne courante.
 
-## 🏗 Architecture : Les Zippers
+## Architecture : Les Zippers
 
 Le cœur de l'application repose sur le type `zipper`, permettant un accès constant à l'élément sous le curseur et des modifications locales à moindre coût.
 
