@@ -1,7 +1,6 @@
 # OCaml Text Editor 
 
-
-**OCaml Text Editor** est un éditeur de texte minimaliste qui explore l'utilisation de structures de données purement fonctionnelles, spécifiquement les **Zippers**, pour implémenter un buffer d'édition efficace et robuste.
+OCaml Text Editor est un éditeur de texte minimaliste qui explore l'utilisation de structures de données purement fonctionnelles, spécifiquement les Zippers, pour implémenter un buffer d'édition efficace et robuste.
 
 ## Description
 
@@ -11,14 +10,14 @@ Ce projet a pour objectif de manipuler des structures de données avancées (Zip
 
 L'éditeur propose les fonctionnalités essentielles suivantes :
 
-* **Édition de texte :** Insertion de caractères et gestion du retour à la ligne (`Entrée`).
-* **Navigation :** Déplacement fluide du curseur (Haut, Bas, Gauche, Droite).
-    * *Navigation intelligente :* Lors des déplacements verticaux, le curseur tente de conserver sa position horizontale, même si les lignes sont de longueurs différentes.
-    * *Passage de ligne :* Le curseur passe automatiquement à la ligne suivante ou précédente lorsqu'il atteint les extrémités d'une ligne.
-* **Suppression avancée :**
+* Édition de texte : Insertion de caractères et gestion du retour à la ligne (`Entrée`).
+* Navigation : Déplacement fluide du curseur (Haut, Bas, Gauche, Droite).
+    * Navigation intelligente : Lors des déplacements verticaux, le curseur tente de conserver sa position horizontale, même si les lignes sont de longueurs différentes.
+    * Passage de ligne : Le curseur passe automatiquement à la ligne suivante ou précédente lorsqu'il atteint les extrémités d'une ligne.
+* Suppression avancée :
     * Support des touches `Suppr` et `Backspace`.
-    * **Fusion de lignes :** Si la suppression intervient au début ou à la fin d'une ligne, l'éditeur fusionne automatiquement la ligne courante avec la précédente ou la suivante.
-* **Raccourcis :** Déplacement rapide au début ou à la fin de la ligne courante.
+    * Fusion de lignes : Si la suppression intervient au début ou à la fin d'une ligne, l'éditeur fusionne automatiquement la ligne courante avec la précédente ou la suivante.
+* Raccourcis : Déplacement rapide au début ou à la fin de la ligne courante.
 
 ## Architecture : Les Zippers
 
@@ -27,8 +26,8 @@ Le cœur de l'application repose sur le type `zipper`, permettant un accès cons
 ### Modélisation
 Le buffer textuel est modélisé par une double structure de zipper :
 
-1.  **La Ligne (`line`) :** Un zipper de caractères `(char, cursor) zipper`.
-2.  **Le Buffer (`buffer`) :** Un zipper de lignes `(line, line) zipper`.
+1.  La Ligne (`line`) : Un zipper de caractères `(char, cursor) zipper`.
+2.  Le Buffer (`buffer`) : Un zipper de lignes `(line, line) zipper`.
 
 ```ocaml
 type ('a, 'b) zipper = {
